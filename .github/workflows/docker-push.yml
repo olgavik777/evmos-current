@@ -35,7 +35,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push goleveldb image
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: .
           push: true
@@ -44,7 +44,7 @@ jobs:
           tags: tharsishq/evmos:latest, tharsishq/evmos:${{ steps.meta.outputs.tag }}
 
       - name: Build and push pebbledb image
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: .
           push: true
